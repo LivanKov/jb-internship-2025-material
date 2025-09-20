@@ -13,7 +13,7 @@ Once you wrote the `main.c` file, please test your solution by compiling the pro
 cc main.c -lrender -L. -framework Cocoa -framework AudioToolbox
 ```
 
-**Linux** (only `aarch64` at the moment)
+**Linux**
 
 ```shell
 # using aarch64
