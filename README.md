@@ -6,15 +6,21 @@ More information on the internship position can be found at the [following link]
 
 Once you wrote the `main.c` file, please test your solution by compiling the program with:
 
-**macOS**
+**macOS** (only `aarch64` at the moment)
+
 ```shell
 cc main.c -lrender -L. -framework Cocoa -framework AudioToolbox
 ```
 
-**Linux**
+**Linux** (only `aarch64` at the moment)
+
 ```shell
 cc main.c -lrender -L. -lX11 -lasound
 ```
 ### Bonus
 
 Already providing a functioning program is a huge step. However, if you like "challenges", are you able to activate the program's animation? :)
+
+### Questions?
+
+If you have any questions, please feel free to reach me `gabriele.pappalardo@jetbrains.com`.
