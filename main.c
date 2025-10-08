@@ -42,8 +42,8 @@ int main(void) {
     int height = gfx_get_height(); 
     const char* title = _gfx_get_title();
 
-    const size_t CTX_SIZE = 0x448;
-    void* raw_ctx = malloc(CTX_SIZE);
+    // 64-bit linux system
+    void* raw_ctx = malloc(24);
     
     if (!raw_ctx) {
         fprintf(stderr, "malloc context failed\n");
@@ -51,7 +51,7 @@ int main(void) {
         return EXIT_FAILURE;
     }
 
-    memset(raw_ctx, 0, CTX_SIZE);
+    memset(raw_ctx, 0, 24);
     struct Core_Data* ctx = (struct Core_Data*)raw_ctx;
 
     ctx = _gfx_create_context(ctx, width, height, title);
