@@ -2,28 +2,19 @@
 
 More information on the internship position can be found at the [following link](https://internship.jetbrains.com/projects/1654).
 
-### How to compile the final executable
-
-Once you wrote the `main.c` file, please test your solution by compiling the program with:
-
-**macOS**
-
-```shell
-# using aarch64
-cc main.c -lrender -L. -framework Cocoa -framework AudioToolbox
-```
+### Compiling the program
 
 **Linux**
 
 ```shell
-# using aarch64
-cc main.c -lrender -L. -lX11 -lasound
+cc -o solution main.c 
+# My solution uses the <dlfcnh.h> header, which may not be linked automatically on some linux distributions. In case of an error, try following.
+cc -o solution main.c -ldl
+# Run the program
+./solution
 ```
-### Bonus
 
-Already providing a functioning program is a huge step. 
-However, if you like "challenges", are you able to activate the program's animation? :)
 
-### Questions?
+### Sidenote
 
-If you have any questions, please feel free to reach me `gabriele.pappalardo@jetbrains.com`.
+Thanks to JetBrains for organizing an interesting challenge
